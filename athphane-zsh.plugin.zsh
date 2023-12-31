@@ -9,3 +9,6 @@ source "${0:a:h}/laravel.zsh"
 
 # Source test commands
 source "${0:a:h}/athphane.zsh"
+
+# Other app aliases
+source "${0:a:h}/other-app-aliases.zsh"
