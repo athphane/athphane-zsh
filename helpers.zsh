@@ -15,3 +15,7 @@ cecho() {
   [ -z "$text" ] && local text="${color}$2${code}0m"
   echo -e "$text"
 }
+
+
+# Clearing terminal cause I'm stoopid
+alias clar=clear
