@@ -1,3 +1,4 @@
+# Function to switch PHP version on the fly based on what PHP version the project uses.
 dynamicPhpVersionSwitcher() {
     local composer_php_version
     composer_php_version=$(jq -r '.require.php' composer.json 2>/dev/null | tr -d '^.')
@@ -53,5 +54,4 @@ composerWithProjectPhpVersion() {
 
 
 alias php=dynamicPhpVersionSwitcher
-
 alias composer=composerWithProjectPhpVersion
