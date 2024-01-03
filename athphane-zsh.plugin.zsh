@@ -10,6 +10,12 @@ source "${0:a:h}/php.zsh"
 # Laravel commands
 source "${0:a:h}/laravel.zsh"
 
+# Nginx helpers for laravel
+source "${0:a:h}/laravel-nginx.zsh"
+
+# Nginx helpers for mysql
+source "${0:a:h}/mysql.zsh"
+
 # Source test commands
 source "${0:a:h}/athphane.zsh"
 

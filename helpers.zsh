@@ -19,3 +19,14 @@ cecho() {
 
 # Clearing terminal cause I'm stoopid
 alias clar=clear
+
+# Helper to run zsh commands with sudo
+zsudo() {
+    sudo zsh -c "$functions[$1]" "$@"
+}
+
+# I'm not sure if this one even works
+reload() {
+  cecho blue "Reloading ZSH..."
+  exec zsh
+}
