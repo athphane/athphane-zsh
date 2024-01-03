@@ -1,23 +1,17 @@
-# Source the helper file
-source "${0:a:h}/helpers.zsh"
+function zsource {
+  local filename="$ZSH_CUSTOM/plugins/athphane-zsh/$1.zsh"
+  if [ -f "$filename" ]; then
+    source "$filename"
+  else
+    echo "Error: File not found or not accessible - $filename"
+  fi
+}
 
-# Source Docker commands
-source "${0:a:h}/docker.zsh"
-
-# Soruce PHP commands
-source "${0:a:h}/php.zsh"
-
-# Laravel commands
-source "${0:a:h}/laravel.zsh"
-
-# Nginx helpers for laravel
-source "${0:a:h}/laravel-nginx.zsh"
-
-# Nginx helpers for mysql
-source "${0:a:h}/mysql.zsh"
-
-# Source test commands
-source "${0:a:h}/athphane.zsh"
-
-# Other app aliases
-source "${0:a:h}/other-app-aliases.zsh"
+zsource helpers
+zsource docker
+zsource php
+zsource laravel
+zsource laravel-nginx
+zsource mysql
+zsource athphane
+zsource other-app-aliases

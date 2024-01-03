@@ -1,5 +1,5 @@
 # Colored text echoing
-cecho() {
+function cecho {
   local code="\033["
   case "$1" in
     black  | bk) color="${code}0;30m";;
@@ -21,12 +21,12 @@ cecho() {
 alias clar=clear
 
 # Helper to run zsh commands with sudo
-zsudo() {
+function zsudo {
     sudo zsh -c "$functions[$1]" "$@"
 }
 
 # I'm not sure if this one even works
-reload() {
+function reload {
   cecho blue "Reloading ZSH..."
   exec zsh
 }

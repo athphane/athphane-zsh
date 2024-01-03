@@ -55,7 +55,7 @@ append-host() {
     # Check if the correct number of arguments is provided
     if [ "$#" -ne 1 ]; then
         cecho red "Usage: $0 <domain>"
-        exit 1
+        return 1
     fi
 
     # Input domain to be added
@@ -67,7 +67,7 @@ append-host() {
     # Check if the file exists
     if [ ! -f "$hosts_file" ]; then
         cecho red "Error: Hosts file not found at $hosts_file"
-        exit 1
+        return 1
     fi
 
     # Directory to store backups
@@ -117,13 +117,13 @@ nginx-create() {
     if zsudo create_nginx_config $current_directory $php_version $base_name; then
         cecho green "$base_name NGINX configuration created!"
     else
-        exit 1
+        return 1
     fi
 
     if sudo ln -s /etc/nginx/sites-available/$base_name /etc/nginx/sites-enabled; then
         cecho green "$base_name NGINX configuration linked!"
     else
-        exit 1
+        return 1
     fi
 
     if sudo nginx -t > /dev/null 2>&1; then
@@ -135,7 +135,7 @@ nginx-create() {
         cecho rd "NGINX configuration test failed. Removing created files."
         rm /etc/nginx/sites-enabled/$base_name
         rm /etc/nginx/sites-available/$base_name
-        exit 1
+        return 1
     fi
 
     read -p "Do you want to create a database for this? (y/n): " choice
