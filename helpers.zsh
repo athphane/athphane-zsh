@@ -16,10 +16,6 @@ function cecho {
   echo -e "$text"
 }
 
-
-# Clearing terminal cause I'm stoopid
-alias clar=clear
-
 # Helper to run zsh commands with sudo
 function zsudo {
     sudo zsh -c "$functions[$1]" "$@"

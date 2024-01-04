@@ -8,6 +8,7 @@ function zsource {
 }
 
 zsource helpers
+zsource quick-aliases
 zsource docker
 zsource php
 zsource laravel
