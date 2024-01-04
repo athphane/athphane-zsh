@@ -11,3 +11,16 @@ function artisanRouteList {
 }
 
 alias arl=artisanRouteList
+
+function open-site {
+    local current_directory=$PWD
+    local base_name=$(basename $current_directory)
+    local home_www="$HOME/www"
+
+    # Check if the current directory is inside $HOME/www
+    if [[ $current_directory == $home_www* ]]; then
+        firefox "$base_name.test"
+    else
+        echo "Error: Current directory is not inside $home_www"
+    fi
+}
