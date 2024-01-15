@@ -1,0 +1,1 @@
+alias cda="composer dump-autoload"

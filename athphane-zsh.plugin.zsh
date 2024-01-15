@@ -12,6 +12,7 @@ zsource quick-aliases
 zsource git
 zsource docker
 zsource php
+zsource composer
 zsource laravel
 zsource laravel-nginx
 zsource mysql

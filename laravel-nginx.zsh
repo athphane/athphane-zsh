@@ -138,18 +138,6 @@ nginx-create() {
         return 1
     fi
 
-    read -p "Do you want to create a database for this? (y/n): " choice
-
-    case "$choice" in
-    y|Y|"" ) # The empty string "" corresponds to Enter being pressed
-        echo "Proceeding with the operation."
-        create_mysql_db "$base_name"
-        ;;
-    n|N )
-        echo "No database was created for this project."
-        ;;
-    * )
-        echo "Invalid choice. Please enter 'y' or 'n'."
-        ;;
-    esac
+    cecho green "Creating database for $base_name"
+    create_mysql_db "$base_name"
 }
