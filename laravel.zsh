@@ -1,6 +1,8 @@
 # Basic
 alias art="php artisan"
 alias tinker="php artisan tinker"
+alias test="php ./vendor/bin/phpunit"
+alias pint="php ./vendor/bin/pint"
 
 # Database
 alias amfs="php artisan migrate:fresh --seed"

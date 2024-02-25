@@ -17,4 +17,5 @@ zsource laravel
 zsource laravel-nginx
 zsource mysql
 zsource athphane
+zsource dropbox
 zsource other-app-aliases
