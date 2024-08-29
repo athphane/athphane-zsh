@@ -10,11 +10,11 @@ dynamicPhpVersionSwitcher() {
             $php_executable "$@"
         else
             cecho yellow "PHP $composer_php_version executable not found. Using default PHP version."
-            php "$@"
+            php83 "$@"
         fi
     else
         cecho blue "No specific PHP version found in composer.json. Using default PHP version."
-        php "$@"
+        php83 "$@"
     fi
 }
 
@@ -28,7 +28,7 @@ composerWithProjectPhpVersion() {
 
     # Get the path to the Composer executable from the system
     local composer_executable
-    composer_executable=/usr/bin/composer
+    composer_executable=/usr/local/bin/composer
 
     # Get the PHP version from the project's composer.json file
     local composer_php_version
@@ -44,11 +44,11 @@ composerWithProjectPhpVersion() {
             $php_executable $composer_executable "$@"
         else
             cecho yellow "PHP $composer_php_version executable not found. Using default PHP version."
-            php $composer_executable "$@"
+            php83 $composer_executable "$@"
         fi
     else
         cecho blue "No specific PHP version found in composer.json. Using default PHP version."
-        php $composer_executable "$@"
+        php83 $composer_executable "$@"
     fi
 }
 
