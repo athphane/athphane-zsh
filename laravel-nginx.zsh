@@ -108,7 +108,7 @@ append-host() {
 
 nginx-create() {
     local current_directory=$PWD
-    local php_version=$(get_php_version)
+    local php_version=$(get_php_version)    
     local base_name=$(basename $current_directory)
 
     cecho blue "Full Directory: $current_directory"
@@ -117,6 +117,7 @@ nginx-create() {
     if zsudo create_nginx_config $current_directory $php_version $base_name; then
         cecho green "$base_name NGINX configuration created!"
     else
+        cecho red "something went wrong"
         return 1
     fi
 
