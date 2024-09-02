@@ -3,6 +3,9 @@ alias art="php artisan"
 alias tinker="php artisan tinker"
 alias test="php ./vendor/bin/phpunit"
 alias pint="php ./vendor/bin/pint"
+alias pest="php ./vendor/bin/pest"
+alias laravel-logs="tail -f storage/logs/laravel.log"
+alias logs="laravel-logs"
 
 # Database
 alias amfs="php artisan migrate:fresh --seed"
