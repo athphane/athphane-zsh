@@ -10,6 +10,11 @@ alias logs="laravel-logs"
 # Database
 alias amfs="php artisan migrate:fresh --seed"
 
+# Create new Laravel Project
+function laravel-new {
+    composer create-project laravel/laravel $@
+}
+
 # Routes
 function artisanRouteList {
     php artisan route:list --sort=name $@
