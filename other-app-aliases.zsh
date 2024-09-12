@@ -13,3 +13,7 @@ function bonsai {
         cecho blue "https://aur.archlinux.org/packages/cbonsai-git"
     fi
 }
+
+function haste() {
+    curl -X POST -s -d "$(cat)" https://paste.athfan.dev/documents --header "content-type: text/plain" | jq --raw-output '.key' | { read key; echo "https://paste.athfan.dev/${key}"; }
+}       
