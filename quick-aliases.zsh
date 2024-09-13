@@ -24,8 +24,3 @@ alias clear-clipboard="qdbus org.kde.klipper /klipper org.kde.klipper.klipper.cl
 # Clear
 alias clar=clear
 alias realc=clear
-
-
-# Node/NPM Aliases  
-alias nrb="npm run build"
-alias nrd="npm run dev"
