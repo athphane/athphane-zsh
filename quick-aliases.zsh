@@ -26,4 +26,6 @@ alias clar=clear
 alias realc=clear
 
 
-
+# Node/NPM Aliases  
+alias nrb="npm run build"
+alias nrd="npm run dev"
