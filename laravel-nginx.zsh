@@ -19,6 +19,8 @@ server {
 
     charset utf-8;
 
+    client_max_body_size 50M;   
+
     location / {
         try_files \$uri \$uri/ /index.php?\$query_string;
     }
