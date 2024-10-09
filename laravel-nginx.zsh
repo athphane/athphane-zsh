@@ -143,4 +143,10 @@ nginx-create() {
 
     cecho green "Creating database for $base_name"
     create_mysql_db "$base_name"
+
+    cecho green "Creating environment from example"
+    cp $current_directory/.env.example $current_directory/.env
+
+    cecho green "Updating environment database connection to local machine configuration"
+    configure_laravel_env_db "$current_directory/.env" "$base_name"
 }
