@@ -9,7 +9,6 @@ function zsource {
 
 zsource helpers
 zsource quick-aliases
-zsource git
 zsource docker
 zsource php
 zsource composer
@@ -20,3 +19,4 @@ zsource mysql
 zsource athphane
 zsource dropbox
 zsource other-app-aliases
+zsource hastebin

@@ -1,5 +1,5 @@
 # Setting environment variable so that it can be used.
-DOCKERDIR="/home/athphane/docker"
+DOCKERDIR="$HOME/docker"
 
 # Main function itself
 function dockerComposeStackControl {

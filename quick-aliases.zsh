@@ -3,13 +3,14 @@
 # =================
 export WWW="$HOME/www"
 export MAKEFLAGS="-j10"    
+export ATHPHANE_ZSH="$ZSH_CUSTOM/plugins/athphane-zsh"
 
 # =================
 # Directory aliases
 # =================
 alias home="cd $HOME"
 alias www="cd $WWW"
-alias athphane-zsh="cd $ZSH_CUSTOM/plugins/athphane-zsh"
+alias athphane-zsh="code $ATHPHANE_ZSH"
 
 # =================
 # Shortcuts
