@@ -20,6 +20,11 @@ function artisanRouteList {
     php artisan route:list --sort=name $@
 }
 
+# Run Laravel Pint in docker container
+function laravel-pint {
+  docker run -it --rm -v $(pwd):/code --workdir=/code composer:latest php /code/vendor/bin/pint
+}
+
 function open-site {
     local current_directory=$PWD
     local base_name=$(basename $current_directory)
