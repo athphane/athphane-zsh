@@ -6,6 +6,7 @@ alias pint="php ./vendor/bin/pint"
 alias pest="php ./vendor/bin/pest"
 alias laravel-logs="tail -f storage/logs/laravel.log"
 alias logs="laravel-logs"
+alias pail="php artisan pail"
 
 # Database
 alias amfs="php artisan migrate:fresh --seed"
