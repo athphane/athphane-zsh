@@ -1,6 +1,7 @@
 # =================
 # Exports
 # =================
+export EDITOR=nano
 export WWW="$HOME/www"
 export MAKEFLAGS="-j10"    
 export ATHPHANE_ZSH="$ZSH_CUSTOM/plugins/athphane-zsh"
@@ -25,3 +26,8 @@ alias clear-clipboard="qdbus org.kde.klipper /klipper org.kde.klipper.klipper.cl
 # Clear
 alias clar=clear
 alias realc=clear
+
+
+# Git
+alias pull="git pull"
+alias push="git push"

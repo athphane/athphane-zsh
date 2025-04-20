@@ -10,7 +10,7 @@ function dockerComposeStackControl {
         case $1 in 
             *)
             cecho green "Attempting default initializer..."
-            docker-compose -p "$1" --env-file $DOCKERDIR/compose-files/.env -f $DOCKERDIR/compose-files/$1.yml "${@:2}"
+            docker compose -p "$1" --env-file $DOCKERDIR/compose-files/.env -f $DOCKERDIR/compose-files/$1.yml "${@:2}"
             ;;
         esac
     fi
