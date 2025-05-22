@@ -26,8 +26,3 @@ alias clear-clipboard="qdbus org.kde.klipper /klipper org.kde.klipper.klipper.cl
 # Clear
 alias clar=clear
 alias realc=clear
-
-
-# Git
-alias pull="git pull"
-alias push="git push"

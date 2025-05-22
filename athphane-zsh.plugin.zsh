@@ -22,3 +22,4 @@ zsource other-app-aliases
 zsource hastebin
 zsource node
 zsource python
+zsource git
