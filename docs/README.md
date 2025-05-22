@@ -24,7 +24,7 @@ Useful for when I want to organize my class methods because a lot of them does s
 ```
 /*
 |--------------------------------------------------------------------------
-| $END$
+| // $END$
 |--------------------------------------------------------------------------
 */
 ```
@@ -37,11 +37,7 @@ Settings -> Editor -> TODO
 The following two regex patters should be added to the Patters section of this setting. 
 
 ```
-^\s*|-+|.*$
-```
-
-```
-^\s*|\s*.+?\s*|.*$
+\|.{1}\/\/.*
 ```
 
 Once added, it should look something like this
