@@ -43,3 +43,7 @@ The following two regex patters should be added to the Patters section of this s
 ```
 ^\s*|\s*.+?\s*|.*$
 ```
+
+Once added, it should look something like this
+
+![Section Comment Highlight Image](images/section-comment-highlight-image.png)
