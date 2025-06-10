@@ -13,3 +13,14 @@ function bonsai {
         cecho blue "https://aur.archlinux.org/packages/cbonsai-git"
     fi
 }    
+
+function neofetch {
+    command_to_check="fastfetch"
+
+    if command -v $command_to_check &> /dev/null; then
+        fastfetch
+    else
+        cecho red "$command_to_check does not exist"
+        cecho blue "Download the cbonsai-git package form the AUR first."
+    fi
+}    
