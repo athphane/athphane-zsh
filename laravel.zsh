@@ -2,7 +2,7 @@
 alias art="php artisan"
 alias tinker="php artisan tinker"
 alias test="php ./vendor/bin/phpunit"
-alias pint="php ./vendor/bin/pint"
+alias pint="php ./vendor/bin/pint --parallel"
 alias pest="php ./vendor/bin/pest"
 alias paratest="php ./vendor/bin/paratest"
 alias laravel-logs="tail -f storage/logs/laravel.log"
@@ -24,7 +24,7 @@ function artisanRouteList {
 
 # Run Laravel Pint in docker container
 function laravel-pint {
-  docker run -it --rm -v $(pwd):/code --workdir=/code composer:latest php /code/vendor/bin/pint
+  docker run -it --rm -v $(pwd):/code --workdir=/code composer:latest php /code/vendor/bin/pint --parallel --ansi
 }
 
 function open-site {
