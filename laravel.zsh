@@ -34,7 +34,7 @@ function open-site {
 
     # Check if the current directory is inside $HOME/www
     if [[ $current_directory == $home_www* ]]; then
-        firefox "$base_name.test"
+        open-in-browser "$base_name.test"
     else
         echo "Error: Current directory is not inside $home_www"
     fi

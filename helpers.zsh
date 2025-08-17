@@ -26,3 +26,24 @@ function reload {
   cecho blue "Reloading ZSH..."
   exec zsh
 }
+
+# Open URL in preferred browser
+function open-in-browser {
+  local url="$1"
+  
+  # Try different browsers in order of preference
+  if command -v floorp &> /dev/null; then
+    floorp "$url"
+  elif command -v firefox &> /dev/null; then
+    firefox "$url"
+  elif command -v google-chrome &> /dev/null; then
+    google-chrome "$url"
+  elif command -v chromium &> /dev/null; then
+    chromium "$url"
+  elif command -v brave-browser &> /dev/null; then
+    brave-browser "$url"
+  else
+    echo "Error: No supported browser found"
+    return 1
+  fi
+}
