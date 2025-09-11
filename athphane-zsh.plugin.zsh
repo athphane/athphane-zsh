@@ -23,3 +23,4 @@ zsource hastebin
 zsource node
 zsource python
 zsource git
+zsource charmbracelet
