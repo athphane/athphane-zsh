@@ -8,6 +8,7 @@ alias paratest="php ./vendor/bin/paratest"
 alias laravel-logs="tail -f storage/logs/laravel.log"
 alias logs="laravel-logs"
 alias pail="php artisan pail"
+alias test-coverage="php -d memory_limit=-1 -d xdebug.mode=coverage ./vendor/bin/phpunit --coverage-clover coverage.xml --coverage-html coverage"
 
 # Database
 alias amfs="php artisan migrate:fresh --seed"
