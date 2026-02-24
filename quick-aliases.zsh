@@ -26,3 +26,6 @@ alias clear-clipboard="qdbus org.kde.klipper /klipper org.kde.klipper.klipper.cl
 # Clear
 alias clar=clear
 alias realc=clear
+
+# Opencode Alias
+alias oc=opencode
