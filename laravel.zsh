@@ -1,10 +1,18 @@
 # Basic
 alias art="php artisan"
 alias tinker="php artisan tinker"
-alias test="php ./vendor/bin/phpunit"
 alias pint="php ./vendor/bin/pint --parallel"
-alias pest="php ./vendor/bin/pest"
-alias paratest="php -d xdebug.mode=off ./vendor/bin/paratest"
+alias pest="php -d memory_limit=-1 ./vendor/bin/pest"
+function test {
+    php ./vendor/bin/phpunit "$@" 2>&1 | tee output.log
+}
+function paratest {
+    local cores=$(nproc)
+    local p_cores=$((cores - 2))
+    [[ $p_cores -lt 1 ]] && p_cores=1
+    [[ $p_cores -gt 10 ]] && p_cores=10
+    php -d xdebug.mode=off ./vendor/bin/paratest -p "$p_cores" "$@" 2>&1 | tee output.log
+}
 alias laravel-logs="tail -f storage/logs/laravel.log"
 alias logs="laravel-logs"
 alias pail="php artisan pail"
@@ -12,6 +20,7 @@ alias test-coverage="php -d memory_limit=-1 -d xdebug.mode=coverage ./vendor/bin
 
 # Database
 alias amfs="php artisan migrate:fresh --seed"
+alias amf="php artisan migrate:fresh"
 
 # Create new Laravel Project
 function laravel-new {
